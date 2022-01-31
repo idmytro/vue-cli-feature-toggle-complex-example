@@ -4,12 +4,12 @@ import { FeatureToggleComponent as feature } from 'vue-feature-toggle';
 
 export const isFeatureVisible = feature.isVisible;
 
-const init = () => {
-  feature.visibility('home/v1', !true);
-  feature.visibility('home/v2', !false);
+export const initFeatureToggles = () => {
+  feature.visibility('home/pink', false);
+  feature.visibility('home/lime', true);
   feature.visibility('feature/about', true);
   feature.visibility('feature1', true);
   feature.visibility('feature2', process.env.VUE_APP_FEATURE2 === 'true');
 };
 
-export default init;
+export default feature;
