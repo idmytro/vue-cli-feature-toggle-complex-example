@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <HelloWorld
-      v-if="$isFeatureVisible('feature/id1')"
+      v-if="$f('feature/id1')"
       msg="Welcome to Your Vue.js App (feature/id1)"
     />
 
     <HelloWorld
-      v-if="!$isFeatureVisible('feature/id1')"
+      v-if="!$f('feature/id1')"
       msg="Welcome to Your Vue.js App (!feature/id1)"
     />
 

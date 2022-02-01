@@ -11,7 +11,7 @@ util1();
 
 Vue.config.productionTip = false;
 Vue.prototype.$f = isFeatureVisible;
-Vue.prototype.$isFeatureVisible = isFeatureVisible;
+// Vue.prototype.$isFeatureVisible = isFeatureVisible; // if this.$f is a bad idea
 
 new Vue({
   router,
