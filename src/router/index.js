@@ -1,10 +1,19 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { isFeatureVisible } from '@/featureToggles';
+import { initFeatureToggles, isFeatureVisible } from '@/featureToggles';
 import Home from '../views/Home.vue';
 // import About from '../views/About.vue';
 
+initFeatureToggles();
+
 Vue.use(VueRouter);
+
+console.log(
+  'router',
+  isFeatureVisible('feature/about'),
+);
+
+// feature.visibility('feature/about', true);
 
 const routes = [
   {

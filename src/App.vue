@@ -6,6 +6,10 @@
       <template v-if="$f('feature/about')">
         | <router-link to="/about">About (feature/about)</router-link>
       </template>
+
+      <template v-if="!$f('feature/about')">
+        | <router-link to="/about">About (disabled?)</router-link>
+      </template>
     </div>
     <router-view/>
   </div>
