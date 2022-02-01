@@ -1,5 +1,5 @@
 <template>
-  <div class="HelloWorld" data-variant="1">
+  <div class="HelloWorld" data-variant="2">
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -15,6 +15,6 @@ export default {
 
 <style scoped>
 .HelloWorld {
-  background-color: gold;
+  background-color: silver;
 }
 </style>

@@ -1,12 +1,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import { isFeatureVisible } from '@/featureToggles';
-
-console.log(
-  'store',
-  isFeatureVisible('feature/about'),
-);
+// it works
+// import { isFeatureVisible } from '@/featureToggles';
+// console.log('store', isFeatureVisible('feature/about'));
 
 Vue.use(Vuex);
 

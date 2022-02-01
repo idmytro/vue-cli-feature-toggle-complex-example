@@ -1,15 +1,10 @@
 <template>
-  <div class="home" :class="{ 'conditional-class': true }">
+  <div class="home">
     <HelloWorld
       v-if="$isFeatureVisible('feature/id1')"
       msg="Welcome to Your Vue.js App (feature/id1)"
     />
-    <!--
-    <HelloWorld
-      v-if="$f('feature/id1')"
-      msg="Welcome to Your Vue.js App (feature/id1)"
-    />
-    -->
+
     <HelloWorld
       v-if="!$isFeatureVisible('feature/id1')"
       msg="Welcome to Your Vue.js App (!feature/id1)"
@@ -24,17 +19,8 @@
 </template>
 
 <script>
-/* eslint-disable global-require */
-import feature, { isFeatureVisible } from '@/featureToggles';
+import feature from '@/featureToggles';
 import HelloWorld from '@/components/HelloWorld.vue';
-
-// feature.showLogs();
-
-// feature.visibility('home/pink', () => currentFeatures.includes('home/pink'));
-// feature.visibility('home/lime', () => currentFeatures.includes('home/lime'));
-
-require('@/styles/home-pink.css');
-require('@/styles/home-lime.css');
 
 export default {
   name: 'Home',
@@ -44,10 +30,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-// .conditional-class {
-  // $path: '../styles/home-lime.css';
-  // @import $path;
-// }
-</style>

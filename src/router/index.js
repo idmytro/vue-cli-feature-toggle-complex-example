@@ -1,19 +1,14 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import { initFeatureToggles, isFeatureVisible } from '@/featureToggles';
+import { initFeatures, isFeatureVisible } from '@/featureToggles';
 import Home from '../views/Home.vue';
-// import About from '../views/About.vue';
 
-initFeatureToggles();
+initFeatures();
 
 Vue.use(VueRouter);
 
-console.log(
-  'router',
-  isFeatureVisible('feature/about'),
-);
-
-// feature.visibility('feature/about', true);
+// it works if it was inited in this file
+// console.log('router', isFeatureVisible('feature/about'));
 
 const routes = [
   {

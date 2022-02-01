@@ -2,10 +2,12 @@ import Vue from 'vue';
 import router from './router';
 import store from './store';
 import App from './App.vue';
+import { isFeatureVisible } from './featureToggles';
+import util1 from './utils/util1';
 
-import { initFeatureToggles, isFeatureVisible } from './featureToggles';
+util1();
 
-// initFeatureToggles();
+// initFeatures(); // do it here if you don't need to add new routes
 
 Vue.config.productionTip = false;
 Vue.prototype.$f = isFeatureVisible;

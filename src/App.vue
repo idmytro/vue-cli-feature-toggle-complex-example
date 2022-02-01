@@ -4,11 +4,11 @@
       <router-link to="/">Home</router-link>
 
       <template v-if="$f('feature/about')">
-        | <router-link to="/about">About (feature/about)</router-link>
+        | <router-link to="/about">About (enabled)</router-link>
       </template>
 
       <template v-if="!$f('feature/about')">
-        | <router-link to="/about">About (disabled?)</router-link>
+        | <router-link to="/about">About (disabled)</router-link>
       </template>
     </div>
     <router-view/>
@@ -18,7 +18,6 @@
 <script>
 export default {
   created() {
-    console.log('==', this.$f('feature/about'));
   },
 };
 </script>
