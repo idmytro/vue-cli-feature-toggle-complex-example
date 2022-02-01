@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" :class="{ 'conditional-class': true }">
     <HelloWorld
       v-if="$isFeatureVisible('feature/id1')"
       msg="Welcome to Your Vue.js App (feature/id1)"
@@ -28,13 +28,13 @@
 import feature, { isFeatureVisible } from '@/featureToggles';
 import HelloWorld from '@/components/HelloWorld.vue';
 
-if (isFeatureVisible('home/pink')) require('@/styles/home-pink.css');
-if (isFeatureVisible('home/lime')) require('@/styles/home-lime.css');
-
 // feature.showLogs();
 
-feature.visibility('feature0', true);
-feature.visibility('feature/id1', true);
+// feature.visibility('home/pink', () => currentFeatures.includes('home/pink'));
+// feature.visibility('home/lime', () => currentFeatures.includes('home/lime'));
+
+require('@/styles/home-pink.css');
+require('@/styles/home-lime.css');
 
 export default {
   name: 'Home',
@@ -44,3 +44,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+// .conditional-class {
+  // $path: '../styles/home-lime.css';
+  // @import $path;
+// }
+</style>
